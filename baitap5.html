@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=
+	, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+function kiemTraTanSuatKyTu(chuoi) {
+    var kyTuArray = [];
+    var tanSuatArray = [];
+
+    for (var i = 0; i < chuoi.length; i++) {
+        var kyTu = chuoi[i];
+        var index = kyTuArray.indexOf(kyTu);
+
+        if (index === -1) {
+            kyTuArray.push(kyTu);
+            tanSuatArray.push(1);
+        } else {
+            tanSuatArray[index]++;
+        }
+    }
+
+    for (var j = 0; j < kyTuArray.length; j++) {
+        console.log('Ký tự ' + kyTuArray[j] + ': ' + tanSuatArray[j] + ' lần');
+    }
+}
+
+var chuoiNhapVao = prompt('Nhập vào một chuỗi kí tự:');
+kiemTraTanSuatKyTu(chuoiNhapVao);
+
+let str = "Hello world, welcome to the universe.";
+let index = str.indexOf("universe",28);
+console.log(index); // In ra: -1
+
+	</script>
+</body>
+</html>
